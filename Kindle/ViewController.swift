@@ -39,15 +39,27 @@ class ViewController: UIViewController {
         
         let page = Page(pageNum: 1, text: "Text for the first page of the Steve Jobs book")
         let page2 = Page(pageNum: 2, text: "Second page on Steve Jobs books")
-        print(page.pageNum)
-        print(page2.text)
-        
-//        let book = Book(title: "Steve Jobs", author: "Walter Issacson")
-//        print("Title: \(book.title), Author: \(book.author)")
+
         
         let stevePages = [page, page2]
         
         let steveBook = Book(title: "Steve Jobs", author: "Walter Issacson", pages: stevePages)
-        print("Title: \(steveBook.title), Author: \(steveBook.author), Pages: \(steveBook.pages[0].text)")
+        let billBook = Book(title: "Bill Gates", author: "Michael P.", pages: [
+                Page(pageNum: 1, text: "Text for page 3 of Bill"),
+                Page(pageNum: 2, text: "Second Page of Bill"),
+                Page(pageNum: 3, text: "Third Page of book of bill"),
+                Page(pageNum: 4, text: "Fourth page player")
+            ])
+        
+        for book in [steveBook, billBook] {
+            print("Title: \(book.title)")
+            for page in book.pages {
+                print("Page \(page.pageNum): \(page.text)")
+            }
+        }
+        
+//        for page in steveBook.pages + billBook.pages {
+//            print(page.text)
+//        }
     }
 }
