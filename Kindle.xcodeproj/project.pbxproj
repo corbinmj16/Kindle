@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		261560501E3AA96A0041D260 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2615604F1E3AA96A0041D260 /* Models.swift */; };
 		9D1066511E357CAB00431801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1066501E357CAB00431801 /* AppDelegate.swift */; };
 		9D1066531E357CAB00431801 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1066521E357CAB00431801 /* ViewController.swift */; };
 		9D1066581E357CAB00431801 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D1066571E357CAB00431801 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2615604F1E3AA96A0041D260 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		9D10664D1E357CAB00431801 /* Kindle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kindle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1066501E357CAB00431801 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D1066521E357CAB00431801 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				9D1066571E357CAB00431801 /* Assets.xcassets */,
 				9D1066591E357CAB00431801 /* LaunchScreen.storyboard */,
 				9D10665C1E357CAB00431801 /* Info.plist */,
+				2615604F1E3AA96A0041D260 /* Models.swift */,
 			);
 			path = Kindle;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261560501E3AA96A0041D260 /* Models.swift in Sources */,
 				9D1066531E357CAB00431801 /* ViewController.swift in Sources */,
 				9D1066511E357CAB00431801 /* AppDelegate.swift in Sources */,
 			);
@@ -500,6 +504,7 @@
 				9D1066771E357CAB00431801 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D1066781E357CAB00431801 /* Build configuration list for PBXNativeTarget "KindleTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +513,7 @@
 				9D10667A1E357CAB00431801 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D10667B1E357CAB00431801 /* Build configuration list for PBXNativeTarget "KindleUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +522,7 @@
 				9D10667D1E357CAB00431801 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

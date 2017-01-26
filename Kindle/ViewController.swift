@@ -8,43 +8,56 @@
 
 import UIKit
 
-class Book {
-    let title: String
-    let author: String
-    let pages: [Page]
-    
-    init(title: String, author: String, pages: [Page]) {
-        self.title = title
-        self.author = author
-        self.pages = pages
-    }
-}
 
-class Page {
-    let pageNum: Int
-    let text: String
+class ViewController: UITableViewController {
+    // MARK: Variables
     
-    init(pageNum: Int, text: String) {
-        self.pageNum = pageNum
-        self.text = text
-    }
-}
-
-class ViewController: UIViewController {
     // create optional property
     // books is an array of type Book
     var books : [Book]?
-
+    
+    
+    //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .red
+        // title of view
+        navigationItem.title = "Books"
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        
         
         // code below here
         setupBooks()
         
     }
     
+    //MARK: UITableView needed functions
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+        
+        let book = books?[indexPath.row]
+        
+        cell.textLabel?.text = book?.title
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // get the count of books and return it
+        if let bookCount = books?.count {
+            return bookCount
+        }
+        // return 0 because when the program runs it will return this value first and then go to the 'if let' above
+        return 0
+    }
+    
+    
+    // MARK: Functions
     func setupBooks() {
         let page = Page(pageNum: 1, text: "Text for the first page of the Steve Jobs book")
         let page2 = Page(pageNum: 2, text: "Second page on Steve Jobs books")
