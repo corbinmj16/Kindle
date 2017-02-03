@@ -24,8 +24,7 @@ class ViewController: UITableViewController {
         // title of view
         navigationItem.title = "Books"
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
-        
+        tableView.register(BookCell.self, forCellReuseIdentifier: "cellId")
         
         // code below here
         setupBooks()
@@ -38,13 +37,15 @@ class ViewController: UITableViewController {
         
         let book = books?[indexPath.row]
         
-        cell.textLabel?.text = book?.title
+//        cell.textLabel?.text = book?.title
+//        cell.imageView?.image = book?.image
+        
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 90
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,8 +65,8 @@ class ViewController: UITableViewController {
         
         let stevePages = [page, page2]
         
-        let steveBook = Book(title: "Steve Jobs", author: "Walter Issacson", pages: stevePages)
-        let billBook = Book(title: "Bill Gates", author: "Michael P.", pages: [
+        let steveBook = Book(title: "Steve Jobs", author: "Walter Issacson", image: #imageLiteral(resourceName: "steve_jobs"), pages: stevePages)
+        let billBook = Book(title: "Bill Gates", author: "Michael P.", image: #imageLiteral(resourceName: "bill_gates"), pages: [
             Page(pageNum: 1, text: "Text for page 3 of Bill"),
             Page(pageNum: 2, text: "Second Page of Bill"),
             Page(pageNum: 3, text: "Third Page of book of bill"),
@@ -74,6 +75,7 @@ class ViewController: UITableViewController {
         
         self.books = [steveBook, billBook]
         
+        // loop through the books and print the title
         if let books = self.books {
             for book in books {
                 print("Title: \(book.title)")
@@ -83,13 +85,6 @@ class ViewController: UITableViewController {
             }
         }
         
-        // not the safest way to unwrap optional
-        //        for book in self.books! {
-        //            print("Title: \(book.title)")
-        //            for page in book.pages {
-        //                print("Page \(page.pageNum): \(page.text)")
-        //            }
-        //        }
     }
 }
 

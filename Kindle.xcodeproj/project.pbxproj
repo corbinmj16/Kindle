@@ -14,6 +14,7 @@
 		9D10665B1E357CAB00431801 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1066591E357CAB00431801 /* LaunchScreen.storyboard */; };
 		9D1066661E357CAB00431801 /* KindleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1066651E357CAB00431801 /* KindleTests.swift */; };
 		9D1066711E357CAB00431801 /* KindleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1066701E357CAB00431801 /* KindleUITests.swift */; };
+		9DCBB28A1E3D76A200BCE4AE /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBB2891E3D76A200BCE4AE /* BookCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9D10666C1E357CAB00431801 /* KindleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KindleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1066701E357CAB00431801 /* KindleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindleUITests.swift; sourceTree = "<group>"; };
 		9D1066721E357CAB00431801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DCBB2891E3D76A200BCE4AE /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				9D1066591E357CAB00431801 /* LaunchScreen.storyboard */,
 				9D10665C1E357CAB00431801 /* Info.plist */,
 				2615604F1E3AA96A0041D260 /* Models.swift */,
+				9DCBB2891E3D76A200BCE4AE /* BookCell.swift */,
 			);
 			path = Kindle;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DCBB28A1E3D76A200BCE4AE /* BookCell.swift in Sources */,
 				261560501E3AA96A0041D260 /* Models.swift in Sources */,
 				9D1066531E357CAB00431801 /* ViewController.swift in Sources */,
 				9D1066511E357CAB00431801 /* AppDelegate.swift in Sources */,
@@ -405,10 +409,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4PM6GBNL6A;
 				INFOPLIST_FILE = Kindle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = work.corbinjensen.Kindle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.corbinjensen.Kindle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -418,10 +423,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4PM6GBNL6A;
 				INFOPLIST_FILE = Kindle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = work.corbinjensen.Kindle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.corbinjensen.Kindle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
